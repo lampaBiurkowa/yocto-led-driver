@@ -1,6 +1,6 @@
 SUMMARY = "addin kernel modules"
 
-IMAGE_INSTALL = "packagegroup-core-boot ${CORE_IMAGE_EXTRA_INSTALL} kernel-modules kernel-devsrc new-gpio-dibdriver"
+IMAGE_INSTALL = "packagegroup-core-boot ${CORE_IMAGE_EXTRA_INSTALL} kernel-modules kernel-devsrc new-led-dibdriver"
 IMAGE_LINGUAS = " "
 
 LICENSE = "MIT"
