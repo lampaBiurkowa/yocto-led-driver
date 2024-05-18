@@ -1,0 +1,22 @@
+From: Your Name <your.email@example.com>
+Date: Sat, 18 May 2024 12:34:56 +0000
+Subject: [PATCH] Add fake device to am335x-bonegreen.dts
+
+Upstream-Status: Inappropriate [local configuration]
+---
+diff --git a/am335x-bonegreen.orig.dts b/am335x-bonegreen.dts
+index ab7fc30..69dea1e 100644
+--- a/arch/arm/boot/dts/ti/omap/am335x-bonegreen.dts
++++ b/arch/arm/boot/dts/ti/omap/am335x-bonegreen.dts
+@@ -11,4 +11,10 @@
+ / {
+ 	model = "TI AM335x BeagleBone Green";
+ 	compatible = "ti,am335x-bone-green", "ti,am335x-bone-black", "ti,am335x-bone", "ti,am33xx";
++
++	foo_device {
++		compatible = "packt,gpio-descriptor-sample";
++		led-gpios = <&gpio1 23 GPIO_ACTIVE_HIGH>, 
++					<&gpio1 24 GPIO_ACTIVE_HIGH>;
++	};
+ };
+\ No newline at end of file
